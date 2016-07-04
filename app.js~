@@ -25,7 +25,7 @@ memory.controller("mainCtrl", function($scope, $timeout, $window){
 			$scope.gameTurned[$scope.choose[0].line][$scope.choose[0].colum] = true;
 			$scope.choose[1].line = -1;
 			$scope.choose[1].colum = -1;
-		}else if($scope.choose[1].line == -1 && !$scope.gameTurned[line][colum]){
+		}else if($scope.choose[1].line == -1 ){
 
 			$scope.choose[1].line = line;
 			$scope.choose[1].colum = colum;
