@@ -8,8 +8,29 @@ memory.controller("mainCtrl", function($scope, $timeout, $window){
 	$scope.gameWin = false;
 	
 
-	$scope.game = [['A','D','C','T'],['T','E','D','B'],['A','M','C','E'],['F','B','M','F']];
-	$scope.gameTurned = [[false,false,false],[false,false,false],[false,false,false],[false,false,false]];
+
+	$scope.initialize = function(m,n){
+		//could be images in the future;
+		var options = [
+			'A','B','C','D','E','F','G','H',
+			'A','B','C','D','E','F','G','H'
+		];
+		$scope.game = [];
+		for(var i = 0; i < m; i++){
+			$scope.game.push([]);
+			for(var j= 0; j < n; j++){
+				$scope.game[i][j]= options.splice([Math.floor((Math.random() * options.length))],1)[0];
+			}
+		}
+		console.log($scope.game);
+		console.log(options);
+		$scope.gameTurned = [[true,true,true,true],[true,true,true,true],[true,true,true,true],[true,true,true,true]];
+
+		$timeout(function(){
+				$scope.gameTurned = [[false,false,false,false],[false,false,false,false],[false,false,false,false],[false,false,false,false]];
+			},10000);
+	};
+	$scope.initialize(4,4);
 
 	$scope.gameFull = ($scope.game.length * $scope.game[0].length)/2;
 
