@@ -1,7 +1,7 @@
 var memory = angular.module("memory", []);
 
 memory.controller("mainCtrl", function($scope, $timeout, $window){
-	$scope.currentLevel = 3;
+	$scope.currentLevel = 1;
 
 	$scope.initCounter = function(){
 		$scope.timeProm = $timeout(function() {
