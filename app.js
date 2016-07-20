@@ -84,7 +84,6 @@ memory.controller("mainCtrl", function($scope, $timeout, $window){
 						$scope.gameTurned[$scope.choose[0]][$scope.choose[1]] = false;
 						$scope.gameTurned[line][colum] = false;
 						$scope.gameWrong++;
-
 					}else{
 						$scope.gameRight++;
 						if($scope.gameFull == $scope.gameRight){
