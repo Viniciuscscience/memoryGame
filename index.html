@@ -20,8 +20,7 @@
 Tempo : {{gameminute}}:{{gamesecond}} - Acertos {{gameRight}} Erros {{gameWrong}}
 	<div class="line" ng-repeat="line in game track by $index" ng-init="lineIndex = $index">
 		<div ng-click="setOption(lineIndex, $index)" ng-class="{'hideContent' : gameTurned[lineIndex][$index]}" class="card" ng-repeat="card in line  track by $index">
-			<!--<div ng-style="{background-image:url({{card}}):true}">{{card}}</div>-->
-			<div style="background-image:url('{{card}}'); background-size: cover"; >v</div>
+			<div style="background-image:url('imgs/{{card}}'); background-size: cover"; >.</div> <!-- tirar esse pónto dai, n consigo dar a altura e largura no css, sem o . -->
 		</div>
 	</div>
 </div>

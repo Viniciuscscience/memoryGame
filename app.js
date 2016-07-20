@@ -1,7 +1,7 @@
 var memory = angular.module("memory", []);
 
 memory.controller("mainCtrl", function($scope, $timeout, $window){
-	$scope.currentLevel = 1;
+	$scope.currentLevel = 3;
 
 	$scope.initCounter = function(){
 		$scope.timeProm = $timeout(function() {
@@ -26,16 +26,24 @@ memory.controller("mainCtrl", function($scope, $timeout, $window){
 		$scope.initCounter();
 		var totalElements = m*n / 2;
 		var elements = [
-			"bulbassauro.jpg",
-			"charmander.jpg",
+			"sandshrew.png",
 			"chikorita.png",
 			"crab.gif",
 			"cubone.png",
 			"hitmonchan.png",
 			"snorlax.png",
-			"squirtle.png",
 			"togepi.jpg",
-			"zoobat.png"
+			"zoobat.png",
+			"ekans.png",
+			"pikachu.png",
+			"tauros.gif",
+			"psyduck.png",
+			"onix.png",
+			"lapras.png",
+			"katerpi.png",
+			"guiarados.png",
+			"blastoise.gif",
+			"dragonite.png"
 		];
 		var usable = [];
 		for(var i=0; i < totalElements; i++){
@@ -67,6 +75,7 @@ memory.controller("mainCtrl", function($scope, $timeout, $window){
 	$scope.initialize($scope.currentLevel*2,$scope.currentLevel*2);
 
 	$scope.restartGame = function(){
+		if($scope.currentLevel<4)
 		$scope.currentLevel++;
 		$scope.initialize($scope.currentLevel*2,$scope.currentLevel*2);
 	}
