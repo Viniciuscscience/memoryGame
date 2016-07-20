@@ -11,13 +11,13 @@
 
 <div ng-show="gameWin" class="lightboxVictory"> 
 <div class="contentVic">
-	<h3>Vitoria - {{gameminute}}:{{gamesecond}}</h3>
+	<h3>Vitoria - {{gameminute | timeDigit}}:{{gamesecond | timeDigit}}</h3>
 
 <div ng-click="restartGame()">RECOMECAR</div>
 </div>
 </div>
 <div class="allcards centralize-a-xy">
-Tempo : {{gameminute}}:{{gamesecond}} - Acertos {{gameRight}} Erros {{gameWrong}}
+Tempo : {{gameminute | timeDigit}}:{{gamesecond | timeDigit}} - Acertos {{gameRight}} Erros {{gameWrong}}
 	<div class="line" ng-repeat="line in game track by $index" ng-init="lineIndex = $index">
 		<div ng-click="setOption(lineIndex, $index)" ng-class="{'hideContent' : gameTurned[lineIndex][$index]}" class="card" ng-repeat="card in line  track by $index">
 			<div style="background-image:url('imgs/{{card}}'); background-size: cover"; >.</div> <!-- tirar esse pónto dai, n consigo dar a altura e largura no css, sem o . -->

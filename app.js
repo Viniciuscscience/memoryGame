@@ -1,5 +1,11 @@
 var memory = angular.module("memory", []);
 
+memory.filter('timeDigit', [function () {
+	return function (input) {
+		return input < 10  ? '0'+input:input;
+	};
+}]);
+
 memory.controller("mainCtrl", function($scope, $timeout, $window){
 	$scope.currentLevel = 1;
 
@@ -106,9 +112,5 @@ memory.controller("mainCtrl", function($scope, $timeout, $window){
 		}
 
 	}
-
-
-
-
 
 });
