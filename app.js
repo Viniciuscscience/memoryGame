@@ -7,7 +7,7 @@ memory.filter('timeDigit', [function () {
 }]);
 
 memory.controller("mainCtrl", function($scope, $timeout, $window){
-	$scope.currentLevel = 1;
+	$scope.currentLevel = 5;
 
 	$scope.initCounter = function(){
 		$scope.timeProm = $timeout(function() {
@@ -33,64 +33,8 @@ memory.controller("mainCtrl", function($scope, $timeout, $window){
 		$timeout.cancel($scope.timeProm);
 		$scope.initCounter();
 		var totalElements = m*n / 2;
-		var elements = [
-			"sandshrew.png",
-			"chikorita.png",
-			"crab.gif",
-			"cubone.png",
-			"hitmonchan.png",
-			"snorlax.png",
-			"togepi.jpg",
-			"zoobat.png",
-			"ekans.png",
-			"pikachu.png",
-			"tauros.gif",
-			"psyduck.png",
-			"onix.png",
-			"lapras.png",
-			"katerpi.png",
-			"guiarados.png",
-			"blastoise.gif",
-			"dragonite.png",
-			"bulbassauro.png",
-			"butterfree.jpg",
-			"cynda.gif",
-			"articuno.JPG",
-			"dragonair.gif",
-			"eevee.png",
-			"geodude.png",
-			"kakuna.jpg",
-			"lugia.gif",
-			"zapdus.jpg",
-			"mewtwo.png",
-			"pichu.jpg",
-			"pidgey.png",
-			"primeape.png",
-			"raichu.gif",
-			"raikou.gif",
-			"totodile.gif",
-			"venossauro.png",
-			"vulpix.jpg",
-			"wartotle.png",
-			"abra.png",
-			"alakazan.png",
-			"arbock.png",
-			"eggzegutor.png",
-			"koffin.png",
-			"macaco.png",
-			"magikarp.png",
-			"ninetails.png",
-			"patamon.gif",
-			"poliwag.jpg",
-			"ratat.png",
-			"slowbro.jpg",
-			"snyvil.png",
-			"spellbroat.png",
-			"sunflora.jpg",
-			"tentacruel",
-			"vileplume.jpg",
-			"weepevo.png",
-			"weezing.png"
+		//receber nome das imagens atravez de rota http, e colocar para retornar imagens aleatorias também
+		var elements = [ "sandshrew.png", "chikorita.png", "crab.gif", "cubone.png", "hitmonchan.png", "snorlax.png", "togepi.jpg", "zoobat.png", "ekans.png", "pikachu.png", "tauros.gif", "psyduck.png", "onix.png", "lapras.png", "katerpi.png", "guiarados.png", "blastoise.gif", "dragonite.png", "bulbassauro.png", "butterfree.jpg", "cynda.gif", "articuno.JPG", "dragonair.gif", "eevee.png", "geodude.png", "kakuna.jpg", "lugia.gif", "zapdus.jpg", "mewtwo.png", "pichu.jpg", "pidgey.png", "primeape.png", "raichu.gif", "raikou.gif", "totodile.gif", "venossauro.png", "vulpix.jpg", "wartotle.png", "abra.png", "alakazan.png", "arbock.png", "eggzegutor.png", "koffin.png", "macaco.png", "magikarp.png", "ninetails.png", "patamon.gif", "poliwag.jpg", "ratat.png", "slowbro.jpg", "snyvil.png", "spellbroat.png", "sunflora.jpg", "tentacruel", "vileplume.jpg", "weepevo.png", "weezing.png"
 		];
 		var usable = [];
 		for(var i=0; i < totalElements; i++){
