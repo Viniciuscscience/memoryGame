@@ -50,7 +50,27 @@ memory.controller("mainCtrl", function($scope, $timeout, $window){
 			"katerpi.png",
 			"guiarados.png",
 			"blastoise.gif",
-			"dragonite.png"
+			"dragonite.png",
+			"bulbassauro.png",
+			"butterfree.jpg",
+			"cynda.gif",
+			"articuno.JPG",
+			"dragonair.gif",
+			"eevee.png",
+			"geodude.png",
+			"kakuna.jpg",
+			"lugia.gif",
+			"zapdus.jpg",
+			"mewtwo.png",
+			"pichu.jpg",
+			"pidgey.png",
+			"primeape.png",
+			"raichu.gif",
+			"raikou.gif",
+			"totodile.gif",
+			"venossauro.png",
+			"vulpix.jpg",
+			"wartotle.png"
 		];
 		var usable = [];
 		for(var i=0; i < totalElements; i++){
@@ -82,8 +102,12 @@ memory.controller("mainCtrl", function($scope, $timeout, $window){
 	$scope.initialize($scope.currentLevel*2,$scope.currentLevel*2);
 
 	$scope.restartGame = function(){
-		if($scope.currentLevel<3)
+		if($scope.currentLevel<4)
 		$scope.currentLevel++;
+		$scope.initialize($scope.currentLevel*2,$scope.currentLevel*2);
+	}
+
+	$scope.redo = function(){
 		$scope.initialize($scope.currentLevel*2,$scope.currentLevel*2);
 	}
 

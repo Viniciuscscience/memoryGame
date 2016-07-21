@@ -16,6 +16,8 @@
 <div ng-click="restartGame()">RECOMECAR</div>
 </div>
 </div>
+<button ng-click="redo()">DESISTO</button>
+
 <div class="allcards centralize-a-xy">
 Tempo : {{gameminute | timeDigit}}:{{gamesecond | timeDigit}} - Acertos {{gameRight}} Erros {{gameWrong}}
 	<div class="line" ng-repeat="line in game track by $index" ng-init="lineIndex = $index">
