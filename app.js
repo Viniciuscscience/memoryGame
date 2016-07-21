@@ -7,7 +7,7 @@ memory.filter('timeDigit', [function () {
 }]);
 
 memory.controller("mainCtrl", function($scope, $timeout, $window){
-	$scope.currentLevel = 5;
+	$scope.currentLevel = 1;
 
 	$scope.initCounter = function(){
 		$scope.timeProm = $timeout(function() {
