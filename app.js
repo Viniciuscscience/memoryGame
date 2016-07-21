@@ -70,7 +70,26 @@ memory.controller("mainCtrl", function($scope, $timeout, $window){
 			"totodile.gif",
 			"venossauro.png",
 			"vulpix.jpg",
-			"wartotle.png"
+			"wartotle.png",
+			"abra.png",
+			"alakazan.png",
+			"arbock.png",
+			"eggzegutor.png",
+			"koffin.png",
+			"macaco.png",
+			"magikarp.png",
+			"ninetails.png",
+			"patamon.gif",
+			"poliwag.jpg",
+			"ratat.png",
+			"slowbro.jpg",
+			"snyvil.png",
+			"spellbroat.png",
+			"sunflora.jpg",
+			"tentacruel",
+			"vileplume.jpg",
+			"weepevo.png",
+			"weezing.png"
 		];
 		var usable = [];
 		for(var i=0; i < totalElements; i++){
@@ -102,7 +121,7 @@ memory.controller("mainCtrl", function($scope, $timeout, $window){
 	$scope.initialize($scope.currentLevel*2,$scope.currentLevel*2);
 
 	$scope.restartGame = function(){
-		if($scope.currentLevel<4)
+		if($scope.currentLevel<5)
 		$scope.currentLevel++;
 		$scope.initialize($scope.currentLevel*2,$scope.currentLevel*2);
 	}
