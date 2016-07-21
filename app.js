@@ -82,7 +82,7 @@ memory.controller("mainCtrl", function($scope, $timeout, $window){
 	$scope.initialize($scope.currentLevel*2,$scope.currentLevel*2);
 
 	$scope.restartGame = function(){
-		if($scope.currentLevel<4)
+		if($scope.currentLevel<3)
 		$scope.currentLevel++;
 		$scope.initialize($scope.currentLevel*2,$scope.currentLevel*2);
 	}
