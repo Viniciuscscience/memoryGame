@@ -29,6 +29,7 @@ memory.controller("mainCtrl", function($scope, $timeout, $window){
 		$scope.gameRight = 0;
 		$scope.gameWrong = 0;
 		$scope.choose = [-1,-1];
+		$scope.analyseInProgress = false;
 		$scope.initCounter();
 		var totalElements = m*n / 2;
 		var elements = [
@@ -87,12 +88,13 @@ memory.controller("mainCtrl", function($scope, $timeout, $window){
 	}
 
 	$scope.setOption = function(line,colum){
-		if(!$scope.gameTurned[line][colum]){
+		if(!$scope.gameTurned[line][colum] && !$scope.analyseInProgress){
 			if($scope.choose[0] == -1 ){
 				$scope.gameTurned[line][colum] = true;
 				$scope.choose[0] = line;
 				$scope.choose[1] = colum;
 			}else{
+				$scope.analyseInProgress = true;
 				$scope.gameTurned[line][colum] = true;
 				$timeout(function() {
 					if($scope.game[$scope.choose[0]][$scope.choose[1]] != $scope.game[line][colum]){
@@ -107,6 +109,7 @@ memory.controller("mainCtrl", function($scope, $timeout, $window){
 						}
 					}
 					$scope.choose[0] = -1;
+					$scope.analyseInProgress = false
 				}, 500);
 			}
 		}
