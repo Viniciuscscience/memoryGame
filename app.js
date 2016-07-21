@@ -30,6 +30,7 @@ memory.controller("mainCtrl", function($scope, $timeout, $window){
 		$scope.gameWrong = 0;
 		$scope.choose = [-1,-1];
 		$scope.analyseInProgress = false;
+		$timeout.cancel($scope.timeProm);
 		$scope.initCounter();
 		var totalElements = m*n / 2;
 		var elements = [
